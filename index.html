@@ -1,10 +1,375 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <title>Titel</title>
-  </head>
-  <body>
-    <h1>GitHub Test</h1>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferienhof & Gasthaus Krautwurst Kreutzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Krautwurst Kreutzer</a>
+                <nav class="nav-tabs">
+                    <button class="tab-button active" onclick="showPage('home')">Home</button>
+                    <button class="tab-button" onclick="showPage('menu')">Aktuelles Menü</button>
+                    <button class="tab-button" onclick="showPage('bilder')">Bilder</button>
+                    <button class="tab-button" onclick="showPage('booking')">Zimmer buchen</button>
+                    <button class="tab-button" onclick="showPage('contact')">Kontakt</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="container">
+                    <h1>Willkommen auf dem Ferienhof Krautwurst Kreutzer</h1>
+                    <p>Erleben Sie echte Gastfreundschaft inmitten der wunderschönen Natur. Unser traditionsreicher Ferienhof bietet Ihnen die perfekte Kombination aus Erholung und kulinarischen Genüssen.</p>
+                    <a href="#info" class="cta-button">Mehr erfahren</a>
+                </div>
+            </section>
+
+            <section id="info" class="content-section">
+                <div class="container">
+                    <div class="section-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🏡</div>
+                            <h3>Gemütliche Unterkünfte</h3>
+                            <p>Unsere liebevoll eingerichteten Zimmer bieten Ihnen den perfekten Rückzugsort nach einem ereignisreichen Tag. Alle Unterkünfte sind modern ausgestattet mit Fernseher und Badezimmer</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🍽️</div>
+                            <h3>Regionale Küche</h3>
+                            <p>In unserem Gasthaus verwöhnen wir Sie mit traditionellen Gerichten aus der Region. Frische Zutaten aus eigenem Anbau und von lokalen Produzenten garantieren authentischen Geschmack und höchste Qualität.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🌿</div>
+                            <h3>Naturerlebnis</h3>
+                            <p>Entdecken Sie die Schönheit der Natur bei Wanderungen, Radtouren oder entspannten Spaziergängen. Unser Hof liegt inmitten einer malerischen Landschaft mit zahlreichen Möglichkeiten für Outdoor-Aktivitäten.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                            <h3>Familienfreundlich</h3>
+                            <p>Besonders Familien mit Kindern sind bei uns herzlich willkommen. Unser großer Spielplatz bietet viel Platz zum Toben, und in der Nähe gibt es zahlreiche weitere spannende Aktivitäten, die für unvergessliche Erlebnisse sorgen.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏢</div>
+                            <h3>Firmen willkommen</h3>
+                            <p>Ihre Arbeiter ist bei uns bestens aufgehoben! Täglich ab 6 Uhr geöffnet - ideal für Ihre Mitarbeiter vor Arbeitsbeginn. Genießen Sie unser reichhaltiges Frühstücksangebot in angenehmer Atmosphäre.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- MENU PAGE -->
+        <div id="menu" class="page">
+            <section class="content-section">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 50px;">
+                        <h2 style="font-size: 2.5rem; color: #2d5a2d; margin-bottom: 20px;">Unser aktuelles Menü</h2>
+                        <p style="font-size: 1.2rem; color: #666;">Genießen Sie unsere köstlichen, regionalen Spezialitäten</p>
+                    </div>
+
+                    <div class="menu-card-image" style="text-align: center; margin-bottom: 50px;">
+                        <img src="images/menukarte.jpg" alt="Unsere aktuelle Menükarte" style="max-width: 800px; max-height: 1000px; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); object-fit: contain;">
+                        <p style="margin-top: 15px; font-style: italic; color: #666;">Klicken Sie auf das Bild, um es zu vergrößern</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- BILDER PAGE -->
+        <div id="bilder" class="page">
+            <section class="content-section">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 50px;">
+                        <h2 style="font-size: 2.5rem; color: #2d5a2d; margin-bottom: 20px;">Bildergalerie</h2>
+                        <p style="font-size: 1.2rem; color: #666;">Entdecken Sie unseren Ferienhof in Bildern</p>
+                    </div>
+
+                    <!-- Umgebung -->
+                    <div class="gallery-section">
+                        <h3>Umgebung</h3>
+                        <div class="image-grid">
+                            <div class="gallery-item">
+                                <img src="images/umgebung1.jpg" alt="Naturlandschaft um den Ferienhof" loading="lazy">
+                                <div class="image-caption">Malerische Landschaft</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/umgebung2.jpg" alt="Wanderweg in der Nähe" loading="lazy">
+                                <div class="image-caption">Wanderwege</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/umgebung3.jpg" alt="See in der Umgebung" loading="lazy">
+                                <div class="image-caption">Naheliegender See</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaststube -->
+                    <div class="gallery-section">
+                        <h3>Gaststube</h3>
+                        <div class="image-grid">
+                            <div class="gallery-item">
+                                <img src="images/gaststube1.jpg" alt="Gemütliche Gaststube" loading="lazy">
+                                <div class="image-caption">Unsere gemütliche Gaststube</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/gaststube2.jpg" alt="Restaurant Innenbereich" loading="lazy">
+                                <div class="image-caption">Restaurant-Bereich</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/gaststube3.jpg" alt="Theke und Bar" loading="lazy">
+                                <div class="image-caption">Bar und Theke</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Außenansicht -->
+                    <div class="gallery-section">
+                        <h3>Außenansicht</h3>
+                        <div class="image-grid">
+                            <div class="gallery-item">
+                                <img src="images/aussen1.jpg" alt="Ferienhof Hauptgebäude" loading="lazy">
+                                <div class="image-caption">Hauptgebäude</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/aussen2.jpg" alt="Ferienhof Hauptgebäude" loading="lazy">
+                                <div class="image-caption">Hauptgebäude</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/aussen3.jpg" alt="Parkplatz" loading="lazy">
+                                <div class="image-caption">Parkplatz</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zimmer -->
+                    <div class="gallery-section">
+                        <h3>Zimmer</h3>
+                        <div class="image-grid">
+                            <div class="gallery-item">
+                                <img src="images/zimmer1.jpg" alt="Doppelzimmer" loading="lazy">
+                                <div class="image-caption">Komfortables Doppelzimmer</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/zimmer2.jpg" alt="Familienzimmer" loading="lazy">
+                                <div class="image-caption">Geräumiges Familienzimmer</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/zimmer3.jpg" alt="Badezimmer" loading="lazy">
+                                <div class="image-caption">Modernes Badezimmer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- BOOKING PAGE -->
+        <div id="booking" class="page">
+            <section class="content-section">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 50px;">
+                        <h2 style="font-size: 2.5rem; color: #2d5a2d; margin-bottom: 20px;">Zimmer buchen</h2>
+                        <p style="font-size: 1.2rem; color: #666;">Buchen Sie Ihr Zimmer bequem über unsere Partner-Plattformen</p>
+                    </div>
+
+                    <div class="booking-grid">
+                        <div class="booking-platform">
+                            <div class="platform-header">
+                                <div class="platform-icon airbnb-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.5 16.3c-.4.7-1.2 1.2-2 1.2s-1.6-.5-2-1.2L12 13.7l-1.5 2.6c-.4.7-1.2 1.2-2 1.2s-1.6-.5-2-1.2c-.4-.7-.4-1.6 0-2.3L9.5 9.3c.4-.7 1.2-1.2 2-1.2s1.6.5 2 1.2L12 7.7l-1.5-1.6c-.4-.7-.4-1.6 0-2.3.4-.7 1.2-1.2 2-1.2s1.6.5 2 1.2l3 4.7c.4.7.4 1.6 0 2.3z"/>
+                                    </svg>
+                                </div>
+                                <h3>Airbnb</h3>
+                            </div>
+                            <div class="platform-content">
+                                <p>Entdecken Sie unsere gemütlichen Unterkünfte auf Airbnb. Authentische Bewertungen und einfache Buchung.</p>
+                                <ul class="platform-features">
+                                    <li>✓ Sofortige Buchungsbestätigung</li>
+                                    <li>✓ Flexible Stornierungsbedingungen</li>
+                                    <li>✓ Bewertungen von echten Gästen</li>
+                                    <li>✓ 24/7 Kundenservice</li>
+                                </ul>
+                                <a href="https://www.airbnb.at/rooms/838987347958782396?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2025-09-01&check_out=2025-09-06&children=0&infants=0&pets=0&photo_id=1599286198&source_impression_id=p3_1748106498_P3slT1em-NAlC_SO&previous_page_section_name=1000&federated_search_id=8c2d2160-7935-490d-a0e2-b7e2913203b6" target="_blank" class="booking-button airbnb-btn">
+                                    <span>Jetzt auf Airbnb buchen</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="booking-platform">
+                            <div class="platform-header">
+                                <div class="platform-icon booking-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                                        <path d="M2.5 4A1.5 1.5 0 0 0 1 5.5v13A1.5 1.5 0 0 0 2.5 20h19a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 21.5 4h-19zM2 5.5a.5.5 0 0 1 .5-.5h19a.5.5 0 0 1 .5.5V6H2v-.5zM2 7h20v11.5a.5.5 0 0 1-.5.5h-19a.5.5 0 0 1-.5-.5V7z"/>
+                                        <path d="M5 9.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                                    </svg>
+                                </div>
+                                <h3>Booking.com</h3>
+                            </div>
+                            <div class="platform-content">
+                                <p>Buchen Sie über die weltweit führende Reise-Plattform mit den besten Preisen und Verfügbarkeiten.</p>
+                                <ul class="platform-features">
+                                    <li>✓ Bestpreisgarantie</li>
+                                    <li>✓ Kostenlose Stornierung</li>
+                                    <li>✓ Keine Buchungsgebühren</li>
+                                    <li>✓ Weltweiter Support</li>
+                                </ul>
+                                <a href="https://www.booking.com/hotel/at/ferienhof-krautwurst.de.html?aid=2405612&label=brave_brand_organic_trigger_f3f828ac-4c6a-4b54-8e46-e2779b841553&sid=dda1ca4e06f8db56674c9d5ee6a328cb&dest_id=-1982310&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1748106362&srpvid=a99e7839a76406a1&type=total&ucfs=1&" target="_blank" class="booking-button booking-btn">
+                                    <span>Jetzt auf Booking.com buchen</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="booking-platform">
+                            <div class="platform-header">
+                                <div class="platform-icon direct-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                        <polyline points="9,22 9,12 15,12 15,22"/>
+                                    </svg>
+                                </div>
+                                <h3>Direkt buchen</h3>
+                            </div>
+                            <div class="platform-content">
+                                <p>Kontaktieren Sie uns direkt für persönliche Beratung und die besten Konditionen.</p>
+                                <ul class="platform-features">
+                                    <li>✓ Persönliche Beratung</li>
+                                    <li>✓ Individuelle Angebote</li>
+                                    <li>✓ Direkter Kontakt</li>
+                                    <li>✓ Lokale Geheimtipps inklusive</li>
+                                </ul>
+                                <a href="tel:+4328726690" class="booking-button direct-btn">
+                                    <span>Direkt anrufen</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Booking Info -->
+                    <div class="booking-info-section">
+                        <div class="booking-info-card">
+                            <h3>Warum bei uns buchen?</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <div class="info-icon">🏡</div>
+                                    <div>
+                                        <h4>Authentische Erfahrung</h4>
+                                        <p>Erleben Sie echte Gastfreundschaft auf unserem traditionellen Ferienhof</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">🌿</div>
+                                    <div>
+                                        <h4>Natur pur</h4>
+                                        <p>Inmitten herrlicher Landschaft mit vielen Outdoor-Aktivitäten</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">🍽️</div>
+                                    <div>
+                                        <h4>Regionale Küche</h4>
+                                        <p>Genießen Sie frische, lokale Spezialitäten in unserem Gasthaus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contact" class="page">
+            <section class="content-section">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 50px;">
+                        <h2 style="font-size: 2.5rem; color: #2d5a2d; margin-bottom: 20px;">Kontakt</h2>
+                        <p style="font-size: 1.2rem; color: #666;">Wir freuen uns auf Ihren Besuch!</p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3 style="color: #2d5a2d; margin-bottom: 30px;">Kontaktinformationen</h3>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <strong>Adresse:</strong><br>
+                                    Haiden 48<br>
+                                    3631 Kirchschlag
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div>
+                                    <strong>Telefon:</strong><br>
+                                    +43 (0) 2872 6690
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <strong>E-Mail:</strong><br>
+                                    kreutzer.gasthaus@hotmail.com
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-form">
+                            <h3 style="color: #2d5a2d; margin-bottom: 30px;">Nachricht senden</h3>
+                            <form action="mailto:kreutzer.gasthaus@hotmail.com" method="post" enctype="text/plain" onsubmit="return validateAndFormatForm(event)">
+                                <input type="hidden" id="formatted-message" name=" ">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-Mail *</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefon</label>
+                                    <input type="tel" id="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Nachricht *</label>
+                                    <textarea id="message" rows="5" required placeholder="Ihre Nachricht an uns..."></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Nachricht senden</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ferienhof & Gasthaus Krautwurst Kreutzer. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+</body>
 </html>
