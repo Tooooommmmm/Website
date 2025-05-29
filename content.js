@@ -35,23 +35,28 @@ function toggleMobileMenu() {
 }
 
 // Contact Form Handling
-function validateAndFormatForm(event) {
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    const formStatus = document.getElementById('formStatus');
+    
+    // Validate form
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
 
     if (!name || !email || !message) {
-        alert('Bitte füllen Sie alle Pflichtfelder aus.');
-        event.preventDefault();
+        showFormStatus('error', 'Bitte füllen Sie alle Pflichtfelder aus.');
         return false;
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
-        event.preventDefault();
+        showFormStatus('error', 'Bitte geben Sie eine gültige E-Mail-Adresse ein.');
         return false;
     }
 
@@ -62,11 +67,52 @@ Name: ${name}
 E-Mail: ${email}
 Telefon: ${phone || 'Nicht angegeben'}`;
 
-    // Set the subject
-    const form = event.target;
-    form.action = `mailto:kreutzer.gasthaus@hotmail.com?subject=Kontaktanfrage von ${name}&body=${encodeURIComponent(formattedMessage)}`;
+    // Try to send email using mailto first
+    const mailtoUrl = `mailto:kreutzer.gasthaus@hotmail.com?subject=Kontaktanfrage von ${encodeURIComponent(name)}&body=${encodeURIComponent(formattedMessage)}`;
     
-    return true;
+    // Create a hidden link and try to open it
+    const link = document.createElement('a');
+    link.href = mailtoUrl;
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    
+    try {
+        // Try to open the email client
+        link.click();
+        // Clear the form
+        form.reset();
+    } catch (error) {
+        // If mailto fails, show alternative contact methods
+        showFormStatus('error', `
+            <p>Es gab ein Problem beim Öffnen Ihres E-Mail-Programms.</p>
+            <p>Bitte senden Sie uns eine E-Mail direkt an:</p>
+            <p><strong>kreutzer.gasthaus@hotmail.com</strong></p>
+            <p>Oder rufen Sie uns an unter: <strong>+43 (0) 2872 6690</strong></p>
+        `);
+    }
+    
+    document.body.removeChild(link);
+    return false;
+}
+
+function showFormStatus(type, message) {
+    const formStatus = document.getElementById('formStatus');
+    formStatus.style.display = 'block';
+    formStatus.style.padding = '15px';
+    formStatus.style.borderRadius = '8px';
+    formStatus.style.marginTop = '20px';
+    
+    if (type === 'error') {
+        formStatus.style.backgroundColor = '#ffebee';
+        formStatus.style.color = '#c62828';
+        formStatus.style.border = '1px solid #ffcdd2';
+    } else {
+        formStatus.style.backgroundColor = '#e8f5e9';
+        formStatus.style.color = '#2e7d32';
+        formStatus.style.border = '1px solid #c8e6c9';
+    }
+    
+    formStatus.innerHTML = message;
 }
 
 // Initialize when DOM is loaded

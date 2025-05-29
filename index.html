@@ -252,7 +252,7 @@
 
                         <div class="contact-form">
                             <h3 style="color: #2d5a2d; margin-bottom: 30px;">Nachricht senden</h3>
-                            <form method="post" enctype="text/plain" onsubmit="return validateAndFormatForm(event)">
+                            <form id="contactForm" onsubmit="return handleFormSubmit(event)">
                                 <div class="form-group">
                                     <label for="name">Name *</label>
                                     <input type="text" id="name" required>
@@ -271,6 +271,7 @@
                                 </div>
                                 <button type="submit" class="submit-btn">Nachricht senden</button>
                             </form>
+                            <div id="formStatus" style="margin-top: 20px; display: none;"></div>
                         </div>
                     </div>
                 </div>
