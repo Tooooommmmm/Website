@@ -13,6 +13,11 @@ body {
     min-height: 100vh;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 /* Header & Navigation */
 header {
     background: linear-gradient(135deg, #2d5a2d 0%, #3e7b3e 100%);
@@ -917,5 +922,24 @@ footer {
     
     .signature-label {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .booking-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .container {
+        padding: 0 5px;
+    }
+    img, video {
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 }
