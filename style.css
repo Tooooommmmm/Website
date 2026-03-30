@@ -238,6 +238,86 @@ main {
     font-size: 1.1rem;
 }
 
+.menu-plan-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f6fbf6 100%);
+    border: 1px solid rgba(74,143,74,0.2);
+    border-radius: 20px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.menu-plan-header h2 {
+    font-size: 2.6rem;
+    color: #2d5a2d;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.menu-plan-week {
+    font-size: 1.15rem;
+    color: #4a8f4a;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.menu-plan-price {
+    font-size: 1.2rem;
+    color: #2d5a2d;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.menu-plan-order {
+    color: #b22222;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.menu-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.day-menu-card {
+    background: white;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(74,143,74,0.16);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.day-menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.day-menu-card h3 {
+    color: #2d5a2d;
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(74,143,74,0.2);
+}
+
+.day-menu-content {
+    min-height: 95px;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #445244;
+    background: linear-gradient(135deg, #fbfdfb 0%, #f2f8f2 100%);
+    border: 1px solid rgba(74,143,74,0.18);
+    display: flex;
+    align-items: center;
+}
+
 /* Booking Styles */
 .booking-grid {
     display: grid;
@@ -560,6 +640,14 @@ footer {
     .header-content {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .menu-plan-header h2 {
+        font-size: 2rem;
+    }
+
+    .menu-plan-price {
+        font-size: 1.05rem;
     }
 }
 
