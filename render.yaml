@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: admin-login
+    runtime: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"

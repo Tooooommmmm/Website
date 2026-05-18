@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin – Menüplan | Gasthaus Kreutzer</title>
+    <link rel="icon" type="image/x-icon" href="../images/BrowserIcon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <div class="container admin-header-inner">
+            <a href="../index.html" class="admin-logo">Gasthaus Kreutzer</a>
+            <span class="admin-badge">Administration</span>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="container">
+            <section id="login-section" class="admin-card">
+                <h1>Anmeldung</h1>
+                <form id="login-form" class="admin-form">
+                    <div class="form-group">
+                        <label for="username">Benutzername</label>
+                        <input type="text" id="username" name="username" required autocomplete="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Passwort</label>
+                        <input type="password" id="password" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="admin-btn admin-btn-primary">Anmelden</button>
+                </form>
+                <p id="login-error" class="admin-message admin-message-error" hidden></p>
+            </section>
+
+            <section id="dashboard-section" class="admin-card" hidden>
+                <div class="admin-dashboard-top">
+                    <div>
+                        <h1>Menüplan bearbeiten</h1>
+                        <p class="admin-lead">Tragen Sie Kalenderwoche, Jahr und die Menüs von Montag bis Freitag ein.</p>
+                    </div>
+                    <button type="button" id="logout-btn" class="admin-btn admin-btn-secondary">Abmelden</button>
+                </div>
+
+                <form id="menu-form" class="admin-form">
+                    <div class="admin-meta-grid">
+                        <div class="form-group">
+                            <label for="calendar-week">Kalenderwoche (KW)</label>
+                            <input type="number" id="calendar-week" min="1" max="53" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="calendar-year">Jahr</label>
+                            <input type="number" id="calendar-year" min="2000" max="2100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="week-start">Woche beginnt am (Montag)</label>
+                            <input type="date" id="week-start" required>
+                        </div>
+                        <div class="form-group admin-meta-action">
+                            <label>&nbsp;</label>
+                            <button type="button" id="fill-dates-btn" class="admin-btn admin-btn-secondary">Daten automatisch setzen</button>
+                        </div>
+                    </div>
+
+                    <div class="admin-days" id="admin-days"></div>
+
+                    <div class="admin-form-actions">
+                        <button type="submit" class="admin-btn admin-btn-primary">Menüplan speichern</button>
+                        <a href="../index.html" class="admin-btn admin-btn-link">Zur Website</a>
+                    </div>
+                </form>
+
+                <p id="save-success" class="admin-message admin-message-success" hidden></p>
+                <p id="save-error" class="admin-message admin-message-error" hidden></p>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

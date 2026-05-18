@@ -1,0 +1,33 @@
+{
+  "calendarWeek": 23,
+  "year": 2026,
+  "weekStart": "2026-05-14",
+  "days": [
+    {
+      "name": "Montag",
+      "date": "2026-05-14",
+      "menu": "Pariser Schnitzel mit Pommesasdasd und gem. Salat"
+    },
+    {
+      "name": "Dienstag",
+      "date": "2026-05-15",
+      "menu": "Schweinsbraten msadassdit Kartoffelknödel und Krautsalat"
+    },
+    {
+      "name": "Mittwoch",
+      "date": "2026-05-16",
+      "menu": "Krautroulsadaden mit Salzkartoffeln und grünem Salat"
+    },
+    {
+      "name": "Donnerstag",
+      "date": "2026-05-17",
+      "menu": "Feiertag4"
+    },
+    {
+      "name": "Freitag",
+      "date": "2026-05-18",
+      "menu": "Ruhetag3"
+    }
+  ],
+  "updatedAt": "2026-05-18T19:44:53.365Z"
+}

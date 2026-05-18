@@ -1,0 +1,213 @@
+.admin-body {
+    background: linear-gradient(135deg, #e8f0e8 0%, #f4f8f4 100%);
+    min-height: 100vh;
+}
+
+.admin-header {
+    background: linear-gradient(135deg, #2d5a2d 0%, #3e7b3e 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.admin-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.admin-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.35rem;
+    letter-spacing: 0.5px;
+}
+
+.admin-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+.admin-main {
+    padding: 40px 0 60px;
+}
+
+.admin-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(74, 143, 74, 0.15);
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.admin-card h1 {
+    color: #2d5a2d;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.admin-lead {
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.admin-dashboard-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.admin-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.admin-meta-action {
+    grid-column: 1 / -1;
+}
+
+.admin-days {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.admin-day-row {
+    border: 1px solid rgba(74, 143, 74, 0.2);
+    border-radius: 14px;
+    padding: 16px;
+    background: linear-gradient(135deg, #fbfdfb 0%, #f5faf5 100%);
+}
+
+.admin-day-row label {
+    display: block;
+    color: #2d5a2d;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.admin-day-fields {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.admin-day-fields input[type="date"] {
+    width: 100%;
+}
+
+.admin-day-fields textarea {
+    width: 100%;
+    min-height: 72px;
+    resize: vertical;
+    border: 2px solid #e0e8e0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.admin-day-fields textarea:focus,
+.admin-form input:focus {
+    outline: none;
+    border-color: #4a8f4a;
+}
+
+.admin-form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.admin-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-btn-primary {
+    background: linear-gradient(135deg, #4a8f4a 0%, #5ba05b 100%);
+    color: #fff;
+}
+
+.admin-btn-secondary {
+    background: #eef5ee;
+    color: #2d5a2d;
+    border: 1px solid rgba(74, 143, 74, 0.25);
+}
+
+.admin-btn-link {
+    background: transparent;
+    color: #2d5a2d;
+    border: 1px solid rgba(74, 143, 74, 0.35);
+}
+
+.admin-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.admin-message {
+    margin-top: 18px;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+.admin-message-error {
+    background: #ffebee;
+    color: #b71c1c;
+    border: 1px solid #ffcdd2;
+}
+
+.admin-message-success {
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+.menu-plan-empty {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 30px;
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    .admin-card {
+        padding: 22px 18px;
+    }
+
+    .admin-dashboard-top {
+        flex-direction: column;
+    }
+
+    .admin-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-day-fields {
+        grid-template-columns: 1fr;
+    }
+}
