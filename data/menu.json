@@ -1,33 +1,33 @@
 {
-  "calendarWeek": 23,
+  "calendarWeek": 21,
   "year": 2026,
-  "weekStart": "2026-05-14",
+  "weekStart": "2026-05-18",
   "days": [
     {
       "name": "Montag",
-      "date": "2026-05-14",
-      "menu": "Pariser Schnitzel mit Pommesasdasd und gem. Salat"
+      "date": "2026-05-18",
+      "menu": "Brathendl mit Gemüsereis udn gem. Salat"
     },
     {
       "name": "Dienstag",
-      "date": "2026-05-15",
-      "menu": "Schweinsbraten msadassdit Kartoffelknödel und Krautsalat"
+      "date": "2026-05-19",
+      "menu": "Schnitzel mit Pommes und gem. Salat"
     },
     {
       "name": "Mittwoch",
-      "date": "2026-05-16",
-      "menu": "Krautroulsadaden mit Salzkartoffeln und grünem Salat"
+      "date": "2026-05-20",
+      "menu": "gekochtes Rindfleisch mit Kren und Röstkartoffeln"
     },
     {
       "name": "Donnerstag",
-      "date": "2026-05-17",
-      "menu": "Feiertag4"
+      "date": "2026-05-21",
+      "menu": "Schinkenfleckerl mit grünem Salat"
     },
     {
       "name": "Freitag",
-      "date": "2026-05-18",
-      "menu": "Ruhetag3"
+      "date": "2026-05-22",
+      "menu": "ruhetag"
     }
   ],
-  "updatedAt": "2026-05-18T19:44:53.365Z"
+  "updatedAt": "2026-05-19T12:39:53.365Z"
 }
