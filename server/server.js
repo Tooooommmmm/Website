@@ -3,34 +3,24 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
-const fs = require('fs');
 const path = require('path');
+const menuStore = require('./github-menu');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const ROOT = path.join(__dirname, '..');
-const MENU_FILE = path.join(ROOT, 'data', 'menu.json');
 
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'admin';
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
-const JWT_SECRET = process.env.JWT_SECRET || 'get-from-render';
+const JWT_SECRET = process.env.JWT_SECRET;
 const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000')
   .split(',')
   .map((o) => o.trim())
   .filter(Boolean);
 
-if (!ADMIN_PASSWORD || ADMIN_PASSWORD === 'bitte-ein-sicheres-passwort-setzen') {
-  console.warn('WARNUNG: Bitte ADMIN_PASSWORD in server/.env setzen.');
-}
 
-function readMenu() {
-  const raw = fs.readFileSync(MENU_FILE, 'utf8');
-  return JSON.parse(raw);
-}
-
-function writeMenu(data) {
-  data.updatedAt = new Date().toISOString();
-  fs.writeFileSync(MENU_FILE, JSON.stringify(data, null, 2) + '\n', 'utf8');
+if (process.env.GITHUB_TOKEN && (!process.env.GITHUB_OWNER || !process.env.GITHUB_REPO)) {
+  console.warn('WARNUNG: GITHUB_TOKEN gesetzt, aber GITHUB_OWNER oder GITHUB_REPO fehlt – Menü wird nur lokal gespeichert.');
 }
 
 function validateMenuPayload(body) {
@@ -41,7 +31,7 @@ function validateMenuPayload(body) {
   const calendarWeek = Number(body.calendarWeek);
   const year = Number(body.year);
 
-  if (!Number.isInteger(calendarWeek) || calendarWeek < 1 || calendarWeek > 53) {
+  if (!Number.isInteger(calendarWeek) || calendarWeek < 1 || calendarWeek > 54) {
     return { ok: false, error: 'Kalenderwoche muss zwischen 1 und 53 liegen' };
   }
 
@@ -109,10 +99,12 @@ app.use(
 app.use(express.json({ limit: '100kb' }));
 app.use(express.static(ROOT));
 
-app.get('/api/menu', (req, res) => {
+app.get('/api/menu', async (req, res) => {
   try {
-    res.json(readMenu());
-  } catch {
+    const menu = await menuStore.readMenu();
+    res.json(menu);
+  } catch (error) {
+    console.error('Menü lesen fehlgeschlagen:', error.message);
     res.status(500).json({ error: 'Menü konnte nicht gelesen werden' });
   }
 });
@@ -132,7 +124,7 @@ app.get('/api/auth/check', authMiddleware, (req, res) => {
   res.json({ ok: true });
 });
 
-app.put('/api/menu', authMiddleware, (req, res) => {
+app.put('/api/menu', authMiddleware, async (req, res) => {
   const validation = validateMenuPayload(req.body);
 
   if (!validation.ok) {
@@ -140,10 +132,15 @@ app.put('/api/menu', authMiddleware, (req, res) => {
   }
 
   try {
-    writeMenu(validation.data);
-    res.json(validation.data);
-  } catch {
-    res.status(500).json({ error: 'Menü konnte nicht gespeichert werden' });
+    const saved = await menuStore.writeMenu(validation.data);
+    res.json(saved);
+  } catch (error) {
+    console.error('Menü speichern fehlgeschlagen:', error.message);
+    const message =
+      error.status === 401 || error.status === 403
+        ? 'GitHub-Zugriff verweigert. Token und Repository-Rechte prüfen.'
+        : 'Menü konnte nicht gespeichert werden';
+    res.status(500).json({ error: message });
   }
 });
 
@@ -152,6 +149,10 @@ app.get('/admin', (req, res) => {
 });
 
 app.listen(PORT, () => {
+  const storage = menuStore.useGitHub()
+    ? 'GitHub (' + process.env.GITHUB_OWNER + '/' + process.env.GITHUB_REPO + ')'
+    : 'lokale Datei data/menu.json';
+  console.log('Menü-Speicher: ' + storage);
   console.log('Server läuft auf http://localhost:' + PORT);
   console.log('Admin: http://localhost:' + PORT + '/admin/');
 });
