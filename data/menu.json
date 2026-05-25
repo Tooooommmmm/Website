@@ -1,33 +1,33 @@
 {
-  "calendarWeek": 21,
+  "calendarWeek": 22,
   "year": 2026,
-  "weekStart": "2026-05-18",
+  "weekStart": "2026-05-25",
   "days": [
     {
       "name": "Montag",
-      "date": "2026-05-18",
-      "menu": "Brathendl mit Gemüsereis udn gem. Salat"
+      "date": "2026-05-25",
+      "menu": "Feiertag"
     },
     {
       "name": "Dienstag",
-      "date": "2026-05-19",
-      "menu": "Schnitzel mit Pommes und gem. Salat"
+      "date": "2026-05-26",
+      "menu": "Augsburger mit gerösteten Kartoffeln und Rahmfisolen"
     },
     {
       "name": "Mittwoch",
-      "date": "2026-05-20",
-      "menu": "gekochtes Rindfleisch mit Kren und Röstkartoffeln"
+      "date": "2026-05-27",
+      "menu": "faschierte Laibchen mit Kartoffelpürre und grünem Salat"
     },
     {
       "name": "Donnerstag",
-      "date": "2026-05-21",
-      "menu": "Schinkenfleckerl mit grünem Salat"
+      "date": "2026-05-28",
+      "menu": "Letschoschnitzel mit Nudeln und gem. Salat"
     },
     {
       "name": "Freitag",
-      "date": "2026-05-22",
+      "date": "2026-05-29",
       "menu": "Ruhetag"
     }
   ],
-  "updatedAt": "2026-05-19T15:42:13.356Z"
+  "updatedAt": "2026-05-25T15:42:13.356Z"
 }
