@@ -1,33 +1,33 @@
 {
-  "calendarWeek": 23,
+  "calendarWeek": 24,
   "year": 2026,
-  "weekStart": "2026-06-01",
+  "weekStart": "2026-06-08",
   "days": [
     {
       "name": "Montag",
-      "date": "2026-06-01",
-      "menu": "Geselchtes mit Linsen oder Semmelkren und Kartoffelknödel"
+      "date": "2026-06-08",
+      "menu": "Kotelett mit Pommes und Gemüse"
     },
     {
       "name": "Dienstag",
-      "date": "2026-06-02",
-      "menu": "Paprikahendl mit Nockerl und grünem Salat"
+      "date": "2026-06-09",
+      "menu": "Tirolerknödel mit Linsen"
     },
     {
       "name": "Mittwoch",
-      "date": "2026-06-03",
-      "menu": "Schweinsbraten mit Kartoffelknödel und warmen Krautsalat"
+      "date": "2026-06-10",
+      "menu": "gekochtes Rindfleisch mit Semmelkren oder Rahmgemüse und Kartoffelknödel"
     },
     {
       "name": "Donnerstag",
-      "date": "2026-06-04",
-      "menu": "Feiertag"
+      "date": "2026-06-11",
+      "menu": "Spaghetti Bolognese mit grünem Salat"
     },
     {
       "name": "Freitag",
-      "date": "2026-06-05",
+      "date": "2026-06-12",
       "menu": "Ruhetag"
     }
   ],
-  "updatedAt": "2026-06-01T09:42:13.356Z"
+  "updatedAt": "2026-06-08T09:42:13.356Z"
 }
