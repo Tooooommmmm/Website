@@ -1,33 +1,33 @@
 {
-  "calendarWeek": 24,
+  "calendarWeek": 26,
   "year": 2026,
-  "weekStart": "2026-06-15",
+  "weekStart": "2026-06-22",
   "days": [
     {
       "name": "Montag",
-      "date": "2026-06-15",
-      "menu": "Schnitzel mit Pommes und gem. Salat"
+      "date": "2026-06-22",
+      "menu": "Schweinsragout mit Nudeln und gem. Salat"
     },
     {
       "name": "Dienstag",
-      "date": "2026-06-16",
-      "menu": "Rindsrouladen mit Nudeln und gem. Salat"
+      "date": "2026-06-23",
+      "menu": "faschierter Braten mit Kartoffelpüree und grünem Salat"
     },
     {
       "name": "Mittwoch",
-      "date": "2026-06-17",
-      "menu": "faschierte Laibchen mit Kartoffelpüree und grünem Salat"
+      "date": "2026-06-24",
+      "menu": "Hausspieß mit Kartoffelrösti und gem. Salat"
     },
     {
       "name": "Donnerstag",
-      "date": "2026-06-18",
-      "menu": "Brathendl mit Reis und Gemüse"
+      "date": "2026-06-25",
+      "menu": "Bratwürstel mit Röstkartoffeln und gem. Salat"
     },
     {
       "name": "Freitag",
-      "date": "2026-06-19",
+      "date": "2026-06-26",
       "menu": "Ruhetag"
     }
   ],
-  "updatedAt": "2026-06-16T09:42:13.356Z"
+  "updatedAt": "2026-06-21T09:42:13.356Z"
 }
