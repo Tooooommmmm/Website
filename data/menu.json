@@ -11,12 +11,12 @@
     {
       "name": "Dienstag",
       "date": "2026-08-11",
-      "menu": "Geselchtes mit Kartoffelknödel, Schwammerlsauce und Kren"
+      "menu": "Geselchtes mit Kartoffelknödel, Sauerkraut und Kren"
     },
     {
       "name": "Mittwoch",
       "date": "2026-08-12",
-      "menu": "Letschoschnitzel mit Reis und grünem Salat"
+      "menu": "Championschnitzel mit Reis und grünem Salat"
     },
     {
       "name": "Donnerstag",
@@ -29,5 +29,5 @@
       "menu": "Ruhetag"
     }
   ],
-  "updatedAt": "2026-08-11T09:32:13.356Z"
+  "updatedAt": "2026-08-11T09:33:13.356Z"
 }
