@@ -1,33 +1,33 @@
 {
-  "calendarWeek": 35,
+  "calendarWeek": 36,
   "year": 2026,
-  "weekStart": "2026-08-24",
+  "weekStart": "2026-08-31",
   "days": [
     {
       "name": "Montag",
-      "date": "2026-08-24",
-      "menu": "Letschoschnitzel mit Kroketten und gem. Salat"
+      "date": "2026-08-31",
+      "menu": "Championschnitzel mit Reis und gem. Salat"
     },
     {
       "name": "Dienstag",
-      "date": "2026-08-25",
-      "menu": "gekochte Schulter mit Rahmgemüse oder Semmelkren"
+      "date": "2026-09-01",
+      "menu": "faschierter Braten mit Kartoffelpüree und gem. Salat"
     },
     {
       "name": "Mittwoch",
-      "date": "2026-08-26",
-      "menu": "Krautrouladen mit Salzkartoffeln und gem. Salat"
+      "date": "2026-09-02",
+      "menu": "Brathendl mit Petersilkartoffeln und gem. Salat"
     },
     {
       "name": "Donnerstag",
-      "date": "2026-08-27",
-      "menu": "Pariser Schnitzel mit Pommes und gem. Salat"
+      "date": "2026-09-03",
+      "menu": "Gulasch mit Semmelknödel und grünem Salat"
     },
     {
       "name": "Freitag",
-      "date": "2026-08-28",
+      "date": "2026-09-04",
       "menu": "Ruhetag"
     }
   ],
-  "updatedAt": "2026-08-24T09:33:13.356Z"
+  "updatedAt": "2026-09-01T09:33:13.356Z"
 }
