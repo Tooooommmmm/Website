@@ -1013,6 +1013,63 @@ footer {
     }
 }
 
+/* Closure announcement popup */
+.closure-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(80, 0, 0, 0.45);
+}
+
+.closure-popup.hidden {
+    display: none;
+}
+
+.closure-popup-card {
+    background: linear-gradient(135deg, #c62828 0%, #b71c1c 100%);
+    color: #fff;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+.closure-popup-card h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.closure-popup-card p {
+    font-size: 1.15rem;
+    margin-bottom: 24px;
+}
+
+.closure-popup-close {
+    background: #fff;
+    color: #b71c1c;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 28px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.closure-popup-close:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
     .section-grid {
         grid-template-columns: 1fr;

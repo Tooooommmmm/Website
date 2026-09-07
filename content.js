@@ -1,3 +1,10 @@
+function closeClosurePopup() {
+    const popup = document.getElementById('closure-popup');
+    if (!popup) return;
+    popup.classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
 // Tab Navigation Function
 function showPage(pageId) {
     // Hide all pages
@@ -117,6 +124,11 @@ function showFormStatus(type, message) {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    const closurePopup = document.getElementById('closure-popup');
+    if (closurePopup && !closurePopup.classList.contains('hidden')) {
+        document.body.style.overflow = 'hidden';
+    }
+
     // Smooth scrolling for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
