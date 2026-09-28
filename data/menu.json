@@ -1,33 +1,33 @@
 {
-  "calendarWeek": 37,
+  "calendarWeek": 40,
   "year": 2026,
-  "weekStart": "2026-09-07",
+  "weekStart": "2026-09-28",
   "days": [
     {
       "name": "Montag",
-      "date": "2026-09-07",
-      "menu": "Bauernschmaus mit Semmelknödel und Sauerkraut"
+      "date": "2026-09-28",
+      "menu": "Rindsschnitzel mit Nudeln und gem. Salat"
     },
     {
       "name": "Dienstag",
-      "date": "2026-09-08",
-      "menu": "Rindsbraten mit Nudeln und gem. Salat"
+      "date": "2026-09-29",
+      "menu": "Fleisch- ODER Grammelknödel mit Krautsalat"
     },
     {
       "name": "Mittwoch",
-      "date": "2026-09-09",
-      "menu": "Schnitzel mit Pommes und gem. Salat"
+      "date": "2026-09-30",
+      "menu": "Schweinsbraten mit Kartoffelknödel und gem. Salat"
     },
     {
       "name": "Donnerstag",
-      "date": "2026-09-10",
-      "menu": "Spaghetti Bolognese mit grünem Salat"
+      "date": "2026-10-01",
+      "menu": "gebackenen Dorsch mit Kartoffelsalat"
     },
     {
       "name": "Freitag",
-      "date": "2026-09-11",
+      "date": "2026-10-02",
       "menu": "Ruhetag"
     }
   ],
-  "updatedAt": "2026-09-07T09:33:13.356Z"
+  "updatedAt": "2026-09-28T09:33:13.356Z"
 }
