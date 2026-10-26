@@ -10,5 +10,5 @@
 */
 
 window.SITE_CONFIG = {
-  menuApiUrl: 'https://admin-login-jjgr.onrender.com'
+  menuApiUrl: 'http://192.168.178.45:3000'
 };

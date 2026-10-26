@@ -1,9 +1,5 @@
 (function () {
   function getMenuUrl() {
-    const api = window.SITE_CONFIG && window.SITE_CONFIG.menuApiUrl;
-    if (api) {
-      return api.replace(/\/$/, '') + '/api/menu';
-    }
     return 'data/menu.json';
   }
 
