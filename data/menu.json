@@ -1,31 +1,31 @@
 {
   "calendarWeek": 45,
   "year": 2026,
-  "weekStart": "2026-02-11",
+  "weekStart": "2026-11-02",
   "days": [
     {
       "name": "Montag",
-      "date": "2026-02-11",
+      "date": "2026-11-02",
       "menu": "Zwiebelrostbraten mit Bratkartoffeln und gem. Salat"
     },
     {
       "name": "Dienstag",
-      "date": "2026-03-11",
+      "date": "2026-11-03",
       "menu": "Pariser Schnitzel mit Petersilienkartoffeln und gem. Salat"
     },
     {
       "name": "Mittwoch",
-      "date": "2026-04-11",
+      "date": "2026-11-04",
       "menu": "Bauernschmaus mit Semmel- oder Kartoffelknödel"
     },
     {
       "name": "Donnerstag",
-      "date": "2026-05-11",
+      "date": "2026-11-05",
       "menu": "faschierter Braten mit Kartoffelpüree"
     },
     {
       "name": "Freitag",
-      "date": "2026-06-11",
+      "date": "2026-11-06",
       "menu": "Ruhetag"
     }
   ],
