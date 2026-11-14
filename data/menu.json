@@ -1,33 +1,33 @@
 {
-  "calendarWeek": 45,
+  "calendarWeek": 47,
   "year": 2026,
-  "weekStart": "2026-11-02",
+  "weekStart": "2026-11-16",
   "days": [
     {
       "name": "Montag",
-      "date": "2026-11-02",
-      "menu": "Zwiebelrostbraten mit Bratkartoffeln und gem. Salat"
+      "date": "2026-11-16",
+      "menu": "gekochtes Rindfleisch mit Kartoffelknödel und Semmelkren"
     },
     {
       "name": "Dienstag",
-      "date": "2026-11-03",
-      "menu": "Pariser Schnitzel mit Petersilienkartoffeln und gem. Salat"
+      "date": "2026-11-17",
+      "menu": "Geschnetzeltes mit Risibisi"
     },
     {
       "name": "Mittwoch",
-      "date": "2026-11-04",
-      "menu": "Bauernschmaus mit Semmel- oder Kartoffelknödel"
+      "date": "2026-11-18",
+      "menu": "Fleisch- ODER Grammelknödel mit Sauerkraut"
     },
     {
       "name": "Donnerstag",
-      "date": "2026-11-05",
-      "menu": "faschierter Braten mit Kartoffelpüree"
+      "date": "2026-11-19",
+      "menu": "Berner Würstel mit Pommes und gem. Salat"
     },
     {
       "name": "Freitag",
-      "date": "2026-11-06",
+      "date": "2026-11-20",
       "menu": "Ruhetag"
     }
   ],
-  "updatedAt": "2026-11-02T09:33:13.356Z"
+  "updatedAt": "2026-11-14T09:33:13.356Z"
 }
